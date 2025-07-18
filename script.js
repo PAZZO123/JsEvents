@@ -86,12 +86,16 @@ function attachBuyEvents() {
          pricetd.textContent=price;
          const totaltd=document.createElement('td')
          totaltd.textContent=price*btn
+         const deletetd=document.createElement('a')
+         deletetd.textContent='X'
+         deletetd.style.cssText='color:red;padding:50%; text-align: center;'
 
          row.appendChild(idtd)
          row.appendChild(nameTd)
          row.appendChild(qtd)
          row.appendChild(pricetd)
          row.appendChild(totaltd)
+         row.appendChild(deletetd)
          table.appendChild(row)
          let total=document.getElementById('total')
          //for(total of totaltd.appendChild)
