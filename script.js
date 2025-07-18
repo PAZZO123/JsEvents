@@ -1,4 +1,6 @@
-//onsole.log('Hello World')
+//1.console.log('Hello World')
+
+/* 2
 function changeAllArticleColors() {
     const articles=document.querySelectorAll('article')
     for(let article of articles){
@@ -9,4 +11,6 @@ function changeAllArticleColors() {
   // ... function body
 }
 
-changeAllArticleColors()
+changeAllArticleColors() */
+
+//3. Events
