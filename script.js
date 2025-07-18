@@ -35,9 +35,12 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
+            let price=document.querySelector('p').textContent
+            let names=button.querySelector('h2').textContent
             e.target.classList.toggle('sale')
             e.target.parentElement.style.backgroundColor='red';
-            alert(e.target.classList) //now ARTILE
+            console.log('Name is:'+names +' Price :'+price)
+            alert(e.target.classList)
             alert(e.target.parentElement.getAttribute('data-id'))
         }
     })
