@@ -70,10 +70,11 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
+            let product=e.target.closest('article')
             let row=document.createElement('tr')
-            let price=document.querySelector('p').textContent
-            let names=button.querySelector('h2').textContent
-            let input=button.querySelector('input')
+            let price=product.querySelector('p').textContent
+            let names=product.querySelector('h2').textContent
+            let input=product.querySelector('input')
             let btn=input.value;
         const idtd=document.createElement('td')
         idtd.textContent=1;
@@ -92,6 +93,10 @@ function attachBuyEvents() {
          row.appendChild(pricetd)
          row.appendChild(totaltd)
          table.appendChild(row)
+         let total=document.getElementById('total')
+         //for(total of totaltd.appendChild)
+         
+         total.textContent=totaltd.textContent
           //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
            
         }
