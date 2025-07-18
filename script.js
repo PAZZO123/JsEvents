@@ -35,7 +35,7 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
-            alert(e.target.parentElement.tagName) //now
+            alert(e.target.parentElement.tagName) //now ARTILE
         }
     })
     
