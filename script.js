@@ -35,7 +35,7 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
-            const product=e.target.closest('article')
+            //const product=e.target.closest('article')
             let price=document.querySelector('p').textContent
             let names=button.querySelector('h2').textContent
             let input=button.querySelector('input')
