@@ -37,12 +37,20 @@ function attachBuyEvents() {
         if(e.target.tagName==='BUTTON'){
             let price=document.querySelector('p').textContent
             let names=button.querySelector('h2').textContent
+            let input=button.querySelector('button')
+            let btn=input.value;
             e.target.classList.toggle('sale')
-            e.target.parentElement.style.backgroundColor='red';
-            console.log('Name is:'+names +' Price :'+price)
-            alert(e.target.classList)
-            alert(e.target.parentElement.getAttribute('data-id'))
+            if ( e.target.parentElement.style.backgroundColor === 'red') {
+  e.target.parentElement.style.backgroundColor = '';
+} else {
+   e.target.parentElement.style.backgroundColor = 'red';
+}
+          
+            console.log('Name is:'+names +' Price :'+price+'Quantity:'+btn)
+            //alert(e.target.classList)
+            //alert(e.target.parentElement.getAttribute('data-id'))
         }
+          
     })
     
   // ... function body
