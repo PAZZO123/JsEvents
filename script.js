@@ -17,8 +17,9 @@ changeAllArticleColors() */
 function attachBuyEvents() {
     var button=document.getElementById('products')
     button.addEventListener('click',function(e){
+       // alert(e.currentTarget.nodeName)
         if(e.target.tagName==='BUTTON'){
-            alert('BUY')
+            alert('BUY');alert(e.currentTarget)
         }
     })
     
