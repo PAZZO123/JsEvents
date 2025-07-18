@@ -18,6 +18,7 @@ function attachBuyEvents() {
     var button=document.getElementById('products')
     button.addEventListener('click',function(e){
        // alert(e.currentTarget.nodeName)
+       console.log(this)
         if(e.target.tagName==='BUTTON'){
             alert('BUY');alert(e.currentTarget)
         }
