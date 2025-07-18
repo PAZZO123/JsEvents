@@ -30,6 +30,8 @@ function attachBuyEvents() {
 
 attachBuyEvents()*/
 //4. Attributes
+
+/*
 function attachBuyEvents() {
     var button=document.getElementById('products')
     button.addEventListener('click',function(e){
@@ -58,6 +60,46 @@ function attachBuyEvents() {
   // ... function body
 }
 
-attachBuyEvents()
+attachBuyEvents() */
 
 //5 . Creating Element
+function attachBuyEvents() {
+    var button=document.getElementById('products')
+    //var cart=document.getElementById('cart')
+    var table=document.querySelector('table')
+    button.addEventListener('click',function(e){
+       
+        if(e.target.tagName==='BUTTON'){
+            let row=document.createElement('tr')
+            let price=document.querySelector('p').textContent
+            let names=button.querySelector('h2').textContent
+            let input=button.querySelector('input')
+            let btn=input.value;
+        const idtd=document.createElement('td')
+        idtd.textContent=1;
+         const nameTd=document.createElement('td')
+         nameTd.textContent=names
+         const qtd=document.createElement('td')
+         qtd.textContent=btn
+         const pricetd=document.createElement('td')
+         pricetd.textContent=price;
+         const totaltd=document.createElement('td')
+         totaltd.textContent=price*btn
+
+         row.appendChild(idtd)
+         row.appendChild(nameTd)
+         row.appendChild(qtd)
+         row.appendChild(pricetd)
+         row.appendChild(totaltd)
+         table.appendChild(row)
+          //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
+           
+        }
+          
+    })
+    
+  // ... function body
+}
+
+attachBuyEvents()
+
