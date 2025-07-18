@@ -59,3 +59,5 @@ function attachBuyEvents() {
 }
 
 attachBuyEvents()
+
+//5 . Creating Element
