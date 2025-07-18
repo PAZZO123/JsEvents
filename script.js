@@ -88,10 +88,11 @@ function attachBuyEvents() {
          pricetd.textContent=price;
          const totaltd=document.createElement('td')
          totaltd.textContent=total1
-         const deletetd=document.createElement('a')
-         deletetd.textContent='X'
+         const deletetd=document.createElement('td')
+         const deletes=document.createElement('a')
+         deletetd.innerHTML='<a>X</a>'
          deletetd.href='#'
-         deletetd.style.cssText='color:red; text-align: center; text-decoration:none;'
+         deletetd.style.cssText='display:flex; color:red; justify-content: center; align-items:center; text-decoration:none;backgroun-color:green;'
 
          row.appendChild(idtd)
          row.appendChild(nameTd)
@@ -101,13 +102,13 @@ function attachBuyEvents() {
          row.appendChild(deletetd)
          table.appendChild(row)
          let total=document.getElementById('total')
-         //for(total of totaltd.appendChild)
+     
          grandTotal+=total1
          
          total.textContent=grandTotal.toFixed(2)
           //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
            deletetd.addEventListener('click', function (e) {
-        //e.preventDefault();
+      
         grandTotal -= total1;
         total.textContent = grandTotal.toFixed(2);
         table.removeChild(row);
