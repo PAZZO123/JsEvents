@@ -35,10 +35,11 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
+            const product=e.target.closest('article')
             let price=document.querySelector('p').textContent
             let names=button.querySelector('h2').textContent
-            let input=document.querySelector('button')
-            let btn=input?input.value:'N/A';
+            let input=button.querySelector('input')
+            let btn=input.value;
             e.target.classList.toggle('sale')
             if ( e.target.parentElement.style.backgroundColor === 'red') {
                 e.target.parentElement.style.backgroundColor = '';
@@ -47,7 +48,7 @@ function attachBuyEvents() {
                 e.target.parentElement.style.backgroundColor = 'red';
                }
           
-            console.log('Name is:'+names +' Price :'+price+'Quantity:'+btn)
+            console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
             //alert(e.target.classList)
             //alert(e.target.parentElement.getAttribute('data-id'))
         }
