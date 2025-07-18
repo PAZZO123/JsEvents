@@ -36,6 +36,7 @@ function attachBuyEvents() {
        
         if(e.target.tagName==='BUTTON'){
             e.target.classList.toggle('sale')
+            e.target.parentElement.style.backgroundColor='red';
             alert(e.target.classList) //now ARTILE
         }
     })
