@@ -14,11 +14,12 @@ function changeAllArticleColors() {
 changeAllArticleColors() */
 
 //3. Events
+/*
 function attachBuyEvents() {
     var button=document.getElementById('products')
     button.addEventListener('click',function(e){
        // alert(e.currentTarget.nodeName)
-       console.log(this)
+       console.log(this.target)
         if(e.target.tagName==='BUTTON'){
             alert('BUY');alert(e.currentTarget)
         }
@@ -27,4 +28,5 @@ function attachBuyEvents() {
   // ... function body
 }
 
-attachBuyEvents()
+attachBuyEvents()*/
+//4. Attributes
