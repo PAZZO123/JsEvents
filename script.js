@@ -30,3 +30,16 @@ function attachBuyEvents() {
 
 attachBuyEvents()*/
 //4. Attributes
+function attachBuyEvents() {
+    var button=document.getElementById('products')
+    button.addEventListener('click',function(e){
+       
+        if(e.target.tagName==='BUTTON'){
+            alert(e.target.parentElement.tagName) //now
+        }
+    })
+    
+  // ... function body
+}
+
+attachBuyEvents()
