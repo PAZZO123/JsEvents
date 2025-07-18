@@ -106,10 +106,10 @@ function attachBuyEvents() {
          
          total.textContent=grandTotal.toFixed(2)
           //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
-           deleteBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        //grandTotal -= total;
-        //totalElement.textContent = grandTotal.toFixed(2);
+           deletetd.addEventListener('click', function (e) {
+        //e.preventDefault();
+        grandTotal -= total1;
+        total.textContent = grandTotal.toFixed(2);
         table.removeChild(row);
       });
   
