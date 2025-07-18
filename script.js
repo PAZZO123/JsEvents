@@ -38,6 +38,7 @@ function attachBuyEvents() {
             e.target.classList.toggle('sale')
             e.target.parentElement.style.backgroundColor='red';
             alert(e.target.classList) //now ARTILE
+            alert(e.target.parentElement.getAttribute('data-id'))
         }
     })
     
