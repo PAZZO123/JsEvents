@@ -37,14 +37,15 @@ function attachBuyEvents() {
         if(e.target.tagName==='BUTTON'){
             let price=document.querySelector('p').textContent
             let names=button.querySelector('h2').textContent
-            let input=button.querySelector('button')
-            let btn=input.value;
+            let input=document.querySelector('button')
+            let btn=input?input.value:'N/A';
             e.target.classList.toggle('sale')
             if ( e.target.parentElement.style.backgroundColor === 'red') {
-  e.target.parentElement.style.backgroundColor = '';
-} else {
-   e.target.parentElement.style.backgroundColor = 'red';
-}
+                e.target.parentElement.style.backgroundColor = '';
+          } 
+          else {
+                e.target.parentElement.style.backgroundColor = 'red';
+               }
           
             console.log('Name is:'+names +' Price :'+price+'Quantity:'+btn)
             //alert(e.target.classList)
