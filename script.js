@@ -14,3 +14,8 @@ function changeAllArticleColors() {
 changeAllArticleColors() */
 
 //3. Events
+function attachBuyEvents() {
+  // ... function body
+}
+
+attachBuyEvents()
