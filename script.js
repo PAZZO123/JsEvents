@@ -67,17 +67,19 @@ function attachBuyEvents() {
     var button=document.getElementById('products')
     //var cart=document.getElementById('cart')
     var table=document.querySelector('table')
+    let grandTotal=0
     button.addEventListener('click',function(e){
        
         if(e.target.tagName==='BUTTON'){
             let product=e.target.closest('article')
             let row=document.createElement('tr')
-            let price=product.querySelector('p').textContent
+            let price=parseFloat(product.querySelector('p').textContent)
             let names=product.querySelector('h2').textContent
             let input=product.querySelector('input')
-            let btn=input.value;
+            let btn=parseInt(input.value);
+            let total1=price*btn
         const idtd=document.createElement('td')
-        idtd.textContent=1;
+        idtd.textContent=table.rows.length-1;
          const nameTd=document.createElement('td')
          nameTd.textContent=names
          const qtd=document.createElement('td')
@@ -85,10 +87,11 @@ function attachBuyEvents() {
          const pricetd=document.createElement('td')
          pricetd.textContent=price;
          const totaltd=document.createElement('td')
-         totaltd.textContent=price*btn
+         totaltd.textContent=total1
          const deletetd=document.createElement('a')
          deletetd.textContent='X'
-         deletetd.style.cssText='color:red;padding:50%; text-align: center;'
+         deletetd.href='#'
+         deletetd.style.cssText='color:red; text-align: center; text-decoration:none;'
 
          row.appendChild(idtd)
          row.appendChild(nameTd)
@@ -99,10 +102,17 @@ function attachBuyEvents() {
          table.appendChild(row)
          let total=document.getElementById('total')
          //for(total of totaltd.appendChild)
+         grandTotal+=total1
          
-         total.textContent=totaltd.textContent
+         total.textContent=grandTotal.toFixed(2)
           //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
-           
+           deleteBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        //grandTotal -= total;
+        //totalElement.textContent = grandTotal.toFixed(2);
+        table.removeChild(row);
+      });
+  
         }
           
     })

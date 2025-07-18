@@ -41,6 +41,11 @@ body {
   padding: 1em;
   text-align: center;
 }
+  #cart th, #cart td:last-child{
+  padding: 1em;
+  text-align: center;
+  
+}
 
 #cart tfoot th:last-child::after{
   content: "€";
