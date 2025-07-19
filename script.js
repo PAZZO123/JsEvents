@@ -103,7 +103,7 @@ function attachBuyEvents() {
          table.appendChild(row)
          let total=document.getElementById('total')
      
-         grandTotal+=total1//i
+         grandTotal+=total1//increment total
          
          total.textContent=grandTotal.toFixed(2)
           //  console.log('Name is:'+names +' Price :'+price+' Quantity:'+btn)
