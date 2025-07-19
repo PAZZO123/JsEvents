@@ -76,7 +76,7 @@ function attachBuyEvents() {
             let price=parseFloat(product.querySelector('p').textContent)
             let names=product.querySelector('h2').textContent
             let input=product.querySelector('input')
-            let btn=parseInt(input.value);//getting input from user 
+            let btn=parseInt(input.value);//getting input from user HTMLInputElement
             let total1=price*btn
         const idtd=document.createElement('td')
         idtd.textContent=table.rows.length-1;
