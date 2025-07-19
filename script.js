@@ -110,7 +110,7 @@ function attachBuyEvents() {
            deletetd.addEventListener('click', function (e) {  //adding event inside another event
       
         grandTotal -= total1;//removing the deleted total
-        total.textContent = grandTotal.toFixed(2);
+        total.textContent = grandTotal.toFixed(2);//updating the grand total
         table.removeChild(row);
       });
   
