@@ -64,7 +64,7 @@ attachBuyEvents() */
 
 //5 . Creating Element
 function attachBuyEvents() {
-    var button=document.getElementById('products')
+    var button=document.getElementById('products') // parent for delegation
     //var cart=document.getElementById('cart')
     var table=document.querySelector('table')
     let grandTotal=0
