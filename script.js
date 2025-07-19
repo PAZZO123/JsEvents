@@ -66,7 +66,7 @@ attachBuyEvents() */
 function attachBuyEvents() {
     var button=document.getElementById('products') // parent for delegation
     //var cart=document.getElementById('cart')
-    var table=document.querySelector('table')
+    var table=document.querySelector('table')//table to be updated
     let grandTotal=0
     button.addEventListener('click',function(e){
        
