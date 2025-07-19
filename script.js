@@ -68,7 +68,7 @@ function attachBuyEvents() {
     //var cart=document.getElementById('cart')
     var table=document.querySelector('table')//table to be updated
     let grandTotal=0
-    button.addEventListener('click',function(e){
+    button.addEventListener('click',function(e){ // adding event listener to the parent
        
         if(e.target.tagName==='BUTTON'){
             let product=e.target.closest('article')
