@@ -71,7 +71,7 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){ // . adding event listener to the parent
        
         if(e.target.tagName==='BUTTON'){ //.gettin button target from the parent
-            let product=e.target.closest('article')//trying to get the target which is closest or near to the target
+            let product=e.target.closest('article')//.trying to get the target which is closest or near to the target
             let row=document.createElement('tr')
             let price=parseFloat(product.querySelector('p').textContent)
             let names=product.querySelector('h2').textContent
