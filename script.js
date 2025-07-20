@@ -79,7 +79,7 @@ function attachBuyEvents() {
             let btn=parseInt(input.value);//.getting input from user HTMLInputElement
             let total1=price*btn
         const idtd=document.createElement('td')
-        idtd.textContent=table.rows.length-1;//to get the dynamic id which change as row is changing
+        idtd.textContent=table.rows.length-1;//.to get the dynamic id which change as row is changing
          const nameTd=document.createElement('td')
          nameTd.textContent=names
          const qtd=document.createElement('td')
