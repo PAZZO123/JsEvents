@@ -31,7 +31,7 @@ function attachBuyEvents() {
 attachBuyEvents()*/
 //4. Attributes
 
-/*
+
 function attachBuyEvents() {
     var button=document.getElementById('products')
     button.addEventListener('click',function(e){
@@ -60,7 +60,7 @@ function attachBuyEvents() {
   // ... function body
 }
 
-attachBuyEvents() */
+attachBuyEvents() 
 
 //5 . Creating Element
 function attachBuyEvents() {
