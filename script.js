@@ -71,12 +71,13 @@ function attachBuyEvents() {
     button.addEventListener('click',function(e){ // . adding event listener to the parent
        
         if(e.target.tagName==='BUTTON'){ 
+            
              if ( e.target.parentElement.style.backgroundColor === 'red') {
                 e.target.parentElement.style.backgroundColor = '';
           } 
           else {
                 e.target.parentElement.style.backgroundColor = 'red';
-               }//.gettin button target from the parent
+               //.gettin button target from the parent
             let product=e.target.closest('article')//.trying to get the target which is closest or near to the target
             let row=document.createElement('tr')
             let price=parseFloat(product.querySelector('p').textContent)
@@ -84,6 +85,23 @@ function attachBuyEvents() {
             let input=product.querySelector('input')
             let btn=parseInt(input.value);//.getting input from user HTMLInputElement
             let total1=price*btn
+            let foundRow = Array.from(table.rows).find((row, i) => {
+  return row.cells[1] && row.cells[1].textContent === names;
+});
+
+if (foundRow) {
+    // ✅ Update existing row
+    let oldQty = parseInt(foundRow.cells[2].textContent);
+    let newQty = oldQty + btn;
+    let newTotal = newQty * price;
+
+    foundRow.cells[2].textContent = newQty;
+    foundRow.cells[4].textContent = newTotal.toFixed(2);
+
+    grandTotal += total1; // Add to the grand total
+    total.textContent = grandTotal.toFixed(2);
+
+} else {
         const idtd=document.createElement('td')
         idtd.textContent=table.rows.length-1;//.to get the dynamic id which change as row is changing
          const nameTd=document.createElement('td')
@@ -118,9 +136,9 @@ function attachBuyEvents() {
         grandTotal -= total1;//removing the deleted total
         total.textContent = grandTotal.toFixed(2);//updating the grand total
         table.removeChild(row);
-      });
+      });}
   
-        }
+        }}
           
     })
     
