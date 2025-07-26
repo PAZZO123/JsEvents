@@ -85,9 +85,7 @@ function attachBuyEvents() {
             let input=product.querySelector('input')
             let btn=parseInt(input.value);//.getting input from user HTMLInputElement
             let total1=price*btn
-            let foundRow = Array.from(table.rows).find((row, i) => {
-  return row.cells[1] && row.cells[1].textContent === names;
-});
+            let foundRow = Array.from(table.rows).find((row) =>  row.cells[1].textConten === names);
 
 if (foundRow) {
     // ✅ Update existing row
